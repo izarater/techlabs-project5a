@@ -15,7 +15,7 @@ function NavbarMobile() {
         </div>
         <ul className={`${isOpen ? 'nav' : 'nav hidden'}`} id="nav">
           <li className="nav-item">
-            <Link className="nav-link bold" to="/">
+            <Link className="nav-link" to="/">
               Home
             </Link>
           </li>
@@ -24,7 +24,7 @@ function NavbarMobile() {
               About us
             </Link>
           </li>
-          <li className="nav-item menum">
+          <li className="nav-item">
             <Link className="nav-link" to="/restaurants">
               Restaurants
             </Link>

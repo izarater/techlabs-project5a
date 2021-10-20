@@ -19,6 +19,7 @@
 }
 .nav-item,
 .nav-link {
+  color: #000;
   text-decoration: none;
 }
 .nav-item {
@@ -38,10 +39,10 @@
   .header {
     align-items: center;
     flex-direction: row;
-    padding: 1rem 0 1rem 3rem;
+    padding: 1rem 6rem 1rem 3rem;
   }
   .nav {
-    width: 80%;
+    width: 55%;
     font-size: 18px;
     flex-direction: row;
     justify-content: space-around;
