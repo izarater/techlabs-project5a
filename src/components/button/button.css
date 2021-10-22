@@ -36,7 +36,7 @@
   background-color: var(--grey);
   border: 2px solid var(--grey);
 }
-.button--terciary {
+.button--tertiary {
   color: var(--dark);
   background-color: var(--light);
   border: 2px solid var(--light);
@@ -52,7 +52,7 @@
   border: 2px solid var(--greish);
   cursor: pointer;
 }
-.button--terciary:not(.button:disabled):hover {
+.button--tertiary:not(.button:disabled):hover {
   color: var(--darker);
   background-color: var(--lighter);
   border: 2px solid var(--lighter);
