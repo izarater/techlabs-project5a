@@ -24,7 +24,7 @@ function NavbarDesktop() {
               Restaurants
             </Link>
           </li>
-          <Button variant="disabled">Sign up</Button>
+          <Button variant="secondary">Sign up</Button>
         </ul>
       </header>
     </>
