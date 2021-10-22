@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 import './navbar.css';
 import Hamburger from 'hamburger-react';
+import Button from '../button/button';
 
 function NavbarMobile() {
   const [isOpen, setOpen] = useState(false);
@@ -29,11 +30,7 @@ function NavbarMobile() {
               Restaurants
             </Link>
           </li>
-          <li className="nav-item">
-            <Link className="nav-link" to="/">
-              Sign up
-            </Link>
-          </li>
+          <Button variant="secondary">Sign up</Button>
         </ul>
       </header>
     </>
