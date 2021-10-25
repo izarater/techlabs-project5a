@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import Button from '../button/button';
 
 import './navbar.css';
 
@@ -23,11 +24,7 @@ function NavbarDesktop() {
               Restaurants
             </Link>
           </li>
-          <li className="nav-item">
-            <Link className="nav-link" to="/">
-              Sign up
-            </Link>
-          </li>
+          <Button variant="secondary">Sign up</Button>
         </ul>
       </header>
     </>
