@@ -1,0 +1,39 @@
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 10.5rem;
+    background-color: #eee;
+}
+
+.ft-item {
+    padding: 1.25rem 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.ft-item-company {
+    background-color: #999;
+}
+
+.ft-item-links {
+    background-color: #333;
+}
+
+
+@media screen and (min-width: 31rem) {
+    .ft-item {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .ft-item-company {
+        width: 60%;
+        background-color: #999;
+    }
+    
+    .ft-item-links {
+        width: 30%;
+        background-color: #333;
+    }  
+  }
