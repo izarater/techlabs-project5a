@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import facebook from '../../assets/facebook.png';
 import instagram from '../../assets/instagram.png';
 import twitter from '../../assets/twitter.png';
+import Dropdown from '../dropdown/dropdown';
 
 function Footer() {
   return (
