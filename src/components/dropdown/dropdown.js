@@ -1,29 +1,23 @@
-import React from 'react';
 import Select from 'react-select';
-import { typeOfFood } from '../docs/data';
+import React, { useState } from 'react';
+  
 
+  const Dropdown = (props) => {
 
-class Dropdown extends React.Component {
-  state = {
-    selectedOption: null,
-  };
-  handleChange = (selectedOption) => {
-    this.setState({ selectedOption }, () =>
-      console.log(`Option selected:`, this.state.selectedOption)
-    );
-  };
-  render() {
-    const { selectedOption } = this.state;
-
+    const [selectedOption, setSelectedOption] = useState(null);
     return (
       <Select
-        value={selectedOption}
-        onChange={this.handleChange}
-        placeholder={'Type of food'}
-        options={typeOfFood}
+        defaultValue={selectedOption}
+        onChange={setSelectedOption}
+        placeholder={props.text}
+        options={props.data}
       />
     );
+    
   }
-}
+
 
 export default Dropdown;
+
+
+
