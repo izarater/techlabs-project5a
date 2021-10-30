@@ -1,0 +1,34 @@
+.infoPills {
+    text-align: center;
+    margin: 0px 30px;
+    padding: 20px 0px;
+  }
+  
+  .subInfoPills {
+    width: auto;
+    padding: 0 20px;
+  }
+  
+  .subtitleInfoPills {
+    color: #212121;
+    font-size: 22px;
+  }
+  
+  .infoPill {
+    line-height: 30px;
+    margin: 50px 20px;
+  }
+  
+  @media only screen and (min-device-width: 480px) {
+  
+    .subInfoPills {
+      display: flex;
+      justify-content: space-around;    
+    }
+  
+    .infoPill {
+      margin: 10px 20px;
+      text-align: left;
+    }
+  
+  }
