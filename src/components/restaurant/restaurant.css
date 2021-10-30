@@ -1,65 +1,61 @@
 .restaurant {
-    margin-top:auto; 
-    width: 100%;
-    background-color: #fff;
-    color: #747474;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    padding-bottom: 40px;
+  margin-top: auto;
+  width: 100%;
+  background-color: #fff;
+  color: #747474;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding-bottom: 40px;
 }
 
 .restaurant h2 {
-    color: #212121;
-    font-size: 2rem;
+  color: #212121;
+  font-size: 2rem;
 }
 
 .restaurant-text {
-    padding: 0 2rem 1rem 2rem;
+  padding: 0 2rem 1rem 2rem;
 }
 
 .restaurant-button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .restaurant-column1 {
-    width: 100%; 
-    height: 15rem;   
-    background: url('../../assets/RestaurantMobile.png');
+  width: 100%;
+  height: 15rem;
+  background: url('../../assets/RestaurantMobile.png');
 }
-
-
 
 /* Desktop */
 @media screen and (min-width: 40rem) {
-    .restaurant {
-      flex-direction: row;
-      text-align: left;
-      padding: 6rem 0;
-    }
+  .restaurant {
+    flex-direction: row;
+    text-align: left;
+    padding: 6rem 0;
+  }
 
-    .restaurant-column1 {
-        width: 60%;
-        margin-right: 3rem;    
-        background: url('../../assets/RestaurantDesktop.png');
-        border-top-right-radius: 3rem;
-        border-bottom-right-radius: 3rem;
-        height: 30rem;  
-    }
+  .restaurant-column1 {
+    width: 60%;
+    margin-right: 3rem;
+    background: url('../../assets/RestaurantDesktop.png');
+    border-top-right-radius: 3rem;
+    border-bottom-right-radius: 3rem;
+    height: 30rem;
+  }
 
-    .restaurant-column2 {
-        margin: auto 50px auto 0; 
-        width: 50%;
-    }
+  .restaurant-column2 {
+    margin: auto 50px auto 0;
+    width: 50%;
+  }
 
-    .restaurant-button {
-        display: flex;
-        justify-content: left;
-        align-items: left;
-        padding-left: 2rem;
-    }
+  .restaurant-button {
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    padding-left: 2rem;
+  }
 }
-
-
