@@ -20,7 +20,7 @@ function NavbarDesktop() {
             </Link>
           </li>
           <li className="nav-item menum">
-            <Link className="nav-link" to="/restaurants">
+            <Link className="nav-link" to="/discovery">
               Restaurants
             </Link>
           </li>

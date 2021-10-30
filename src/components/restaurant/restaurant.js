@@ -18,7 +18,7 @@ function Restaurant() {
         </div>
         <div className="restaurant-button">
           <Link to="/restaurant">
-            <Button variant="primary">Register</Button>
+            <Button variant="primary">Sign up</Button>
           </Link>
         </div>
       </div>
