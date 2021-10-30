@@ -10,11 +10,11 @@ function Footer() {
       <div className="ft-box1">
         <h2>SaveFood</h2>
         <p className="footer">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-          vestibulum, metus id fermentum ultrices, quam urna luctus felis, quis
-          malesuada lorem ex ut metus. Lorem ipsum dolor sit amet, consectetur
-          adipiscing elit. Sed vestibulum, metus id fermentum ultrices, quam
-          urna luctus felis, quis malesuada lorem ex ut metus.
+          Sustainability improves the quality of our lives, 
+          protects our ecosystem and preserves natural resources 
+          for future generations. Our goal is to prevent restaurants, 
+          or other establishments, from throwing the food left over 
+          in the end of the day in the trash. 
         </p>
         <a href="http://facebook.com">
           <img src={facebook} alt="facebook logo" />
