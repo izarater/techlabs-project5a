@@ -10,15 +10,19 @@ function Restaurant() {
         <div className="restaurant-text">
           <h2>Subscribe your restaurant or store</h2>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
-            vulputate interdum nisl in molestie. Phasellus elementum convallis
-            euismod. Vivamus vulputate nulla nisl. Sed fringilla neque at
-            ultrices luctus.
+            Energistically productize alternative technologies, interactively
+            innovate superior total linkage, rapidiously restore integrated
+            products professionally empower inexpensive methods of
+            empowermententhusiastically target sticky action items, compellingly
+            network user-centric e-services fungibly facilitate adaptive
+            adoption.
           </p>
         </div>
         <div className="restaurant-button">
-          <Link to="/restaurant">
-            <Button variant="primary">Sign up</Button>
+          <Link to="/">
+            <Button variant="primary" size="m">
+              Start now
+            </Button>
           </Link>
         </div>
       </div>
