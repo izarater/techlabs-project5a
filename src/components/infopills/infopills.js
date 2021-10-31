@@ -14,7 +14,6 @@ function InfoPills() {
             still perfectly fit for eating.
           </p>
         </div>
-
         <div className="infoPill">
           <h3 className="subtitleInfoPills">Environmental problems</h3>
           <p>
