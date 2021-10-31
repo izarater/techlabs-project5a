@@ -1,12 +1,22 @@
 .infoPills {
+    display: flex;
+    flex-direction: column;
+    margin: 0px 2rem;
+    padding: 1.2rem 0px;
     text-align: center;
-    margin: 0px 30px;
-    padding: 20px 0px;
+    color: #747474;
+  }
+
+  .infoPills h2 {
+    color: #212121;
+    font-size: 2rem;
   }
   
   .subInfoPills {
     width: auto;
     padding: 0 20px;
+    display: flex;
+    flex-direction: column;
   }
   
   .subtitleInfoPills {
@@ -15,15 +25,15 @@
   }
   
   .infoPill {
-    line-height: 30px;
-    margin: 50px 20px;
+    line-height: 1.5rem;
   }
   
-  @media only screen and (min-device-width: 660px) {
+  @media screen and (min-width: 40rem) {
   
     .subInfoPills {
       display: flex;
       justify-content: space-around;    
+      flex-direction: row;
     }
   
     .infoPill {

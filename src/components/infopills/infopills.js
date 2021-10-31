@@ -3,7 +3,7 @@ import './infopills.css';
 function InfoPills() {
   return (
     <div className="infoPills">
-      <h1>Important information</h1>
+      <h2>Important information</h2>
 
       <div className="subInfoPills">
         <div className="infoPill">
