@@ -1,0 +1,19 @@
+.foodListContainer {
+    margin: 10px 10px;
+    margin-right: 20px;
+    display: flex;
+    justify-content: flex-start;
+    text-align: center;
+    flex-wrap: wrap;
+
+}
+
+.foddListItem {
+    margin: 50px 40px;
+}
+
+@media only screen and (min-device-width: 1321px) {
+    .foodListContainer {
+        margin-right: 0px;
+    }
+}

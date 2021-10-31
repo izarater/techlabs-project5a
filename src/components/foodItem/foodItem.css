@@ -1,0 +1,23 @@
+.itemContainer {
+    justify-content: center;
+    flex-direction: column;
+    background-color: #eeeeee;
+    width: 350px;
+    padding-bottom: 30px;
+    border-radius: 25px;
+}
+
+#reserveButton {
+    justify-content: center;
+    display: flex;
+    gap: 20px 0 ;
+}
+
+#itemImage {
+    width: 350px;
+}
+
+#itemDescription {
+    margin: 25px 20px;
+    line-height: 30px;
+}
