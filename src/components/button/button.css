@@ -41,6 +41,15 @@
   background-color: var(--light);
   border: 2px solid var(--light);
 }
+.button--quaternary {
+  width: 13rem;
+  height: 3rem;
+  font-size: 18px;
+  border-radius: 1rem;
+  color: var(--light);
+  background-color: var(--dark);
+  border: 2px solid var(--dark);
+}
 .button--primary:not(.button:disabled):hover {
   background-color: var(--darken);
   border: 2px solid var(--darken);
@@ -63,6 +72,11 @@
   width: 10rem;
 }
 
+.button--quaternary:not(.button:disabled):hover {
+  background-color: var(--darken);
+  border: 2px solid var(--darken);
+  cursor: pointer;
+}
 @media screen and (min-width: 48em) {
   .button {
     font-size: 17px;
