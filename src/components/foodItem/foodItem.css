@@ -1,0 +1,33 @@
+.itemContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+  background-color: #eeeeee;
+  width: 350px;
+  padding-bottom: 30px;
+  border-radius: 0 0 25px 25px;
+  margin: 0 0 1rem;
+}
+
+.itemContainer > img {
+  width: 350px;
+  height: 190px;
+}
+
+.itemInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#itemDescription {
+  margin: 25px 20px;
+  line-height: 30px;
+}
+
+@media screen and (min-width: 768px) {
+  .itemContainer {
+    margin: 0 1rem 1rem;
+  }
+}

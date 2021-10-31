@@ -1,23 +1,21 @@
 import Select from 'react-select';
-import React, { useState } from 'react';
-  
+import React, { useContext } from 'react';
+import { DiscoveryContext } from '../../context/filter.context';
 
-  const Dropdown = (props) => {
+const Dropdown = (props) => {
+  const { filter, setFilter } = useContext(DiscoveryContext);
+  const handler = (el) => {
+    setFilter(el);
+  };
 
-    const [selectedOption, setSelectedOption] = useState(null);
-    return (
-      <Select
-        defaultValue={selectedOption}
-        onChange={setSelectedOption}
-        placeholder={props.text}
-        options={props.data}
-      />
-    );
-    
-  }
-
+  return (
+    <Select
+      defaultValue={filter}
+      onChange={handler}
+      placeholder={props.text}
+      options={props.data}
+    />
+  );
+};
 
 export default Dropdown;
-
-
-
