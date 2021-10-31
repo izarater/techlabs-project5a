@@ -11,10 +11,12 @@
 .restaurant h2 {
   color: #212121;
   font-size: 2rem;
+  line-height: 2.4rem;
 }
 
 .restaurant-text {
   padding: 0 2rem 1rem 2rem;
+  line-height: 1.5rem;
 }
 
 .restaurant-button {

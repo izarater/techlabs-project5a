@@ -10,12 +10,12 @@ function Restaurant() {
         <div className="restaurant-text">
           <h2>Subscribe your restaurant or store</h2>
           <p>
-            Energistically productize alternative technologies, interactively
-            innovate superior total linkage, rapidiously restore integrated
-            products professionally empower inexpensive methods of
-            empowermententhusiastically target sticky action items, compellingly
-            network user-centric e-services fungibly facilitate adaptive
-            adoption.
+          It’s a huge problem, and it affects all of us. Respect 
+          Food is our way of highlighting the importance of not 
+          wasting food. From the severe effects it has on the 
+          environment, to how it can deepen the hole in our pockets, 
+          food waste is everyone’s problem. Stop wasting, start 
+          saving food.
           </p>
         </div>
         <div className="restaurant-button">
