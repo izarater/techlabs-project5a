@@ -16,7 +16,7 @@
   width: 20%;
   padding: 50px;
   border-radius: 5px;
-  background: rgb(4, 231, 23, 35%);
+  background: rgba(20, 168, 32, 50%);
   margin-top: 25px;
 }
 pre {
@@ -52,10 +52,10 @@ input {
 
 label {
   font-size: 18px;
-  color: rgb(100, 0, 0, 70%);
+  color: rgb(37, 16, 16);
   font-weight: bold;
 }
 
 .regtitle {
-  color: rgb(100, 0, 0);
+  color: rgb(37, 16, 16);
 }
