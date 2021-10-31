@@ -67,6 +67,11 @@
   border: 2px solid var(--lighter);
   cursor: pointer;
 }
+
+.m {
+  width: 10rem;
+}
+
 .button--quaternary:not(.button:disabled):hover {
   background-color: var(--darken);
   border: 2px solid var(--darken);
