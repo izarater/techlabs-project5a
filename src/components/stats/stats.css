@@ -1,5 +1,6 @@
 .stats {
   display: flex;
+  justify-content: space-between;
   align-items: center;
   margin: 0px 50px;
   padding: 20px 0px;
@@ -12,10 +13,12 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: 40%;
 }
 
 .graph {
-  max-width: 360px;
+  max-width: 400px;
+  margin: 0 auto;
 }
 
 #statsText {
@@ -39,6 +42,7 @@
   }
 
   .statsElement {
+    width: 80%;
     margin: 0 auto;
     padding: 0 1rem;
     text-align: center;
@@ -60,6 +64,7 @@
   .statsElement {
     margin: 10px 20px;
     text-align: center;
+    width: 100%;
   }
 
   #graph_1 {
