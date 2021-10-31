@@ -1,9 +1,9 @@
 import './button.css';
 
-const Button = ({ variant = 'primary', onClick, children, disabled }) => {
+const Button = ({ variant = 'primary', size, onClick, children, disabled }) => {
   return (
     <button
-      className={`button button--${variant}`}
+      className={`button button--${variant} ${size}`}
       onClick={onClick}
       disabled={disabled}
     >

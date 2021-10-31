@@ -58,6 +58,11 @@
   border: 2px solid var(--lighter);
   cursor: pointer;
 }
+
+.m {
+  width: 10rem;
+}
+
 @media screen and (min-width: 48em) {
   .button {
     font-size: 17px;
