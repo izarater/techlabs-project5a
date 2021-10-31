@@ -11,7 +11,7 @@ export const dataFood = [
   },
   {
     id: 2,
-    name: 'burger Monster',
+    name: 'Burger Monster',
     quantity: '1',
     description: 'burger, fries and sauces. Nothing more american than that!',
     src: 'https://i.ibb.co/1dDXHMS/Image-2.png',
