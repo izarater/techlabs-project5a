@@ -1,0 +1,61 @@
+.register {
+  height: 100vh;
+  background: url('../../assets/reground.jpg');
+  background-size: 100%;
+}
+.container {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: center;
+  margin: auto;
+}
+.container > form {
+  text-align-last: center;
+  width: 20%;
+  padding: 50px;
+  border-radius: 5px;
+  background: rgb(4, 231, 23, 35%);
+  margin-top: 25px;
+}
+pre {
+  width: 70%;
+  color: #fff;
+  font-size: larger;
+}
+
+/*button {
+  background: #0563b4 !important;
+}
+
+p {
+  color: red
+}
+*/
+
+.form-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/*
+.field {
+  color: rgb(2, 2, 12);  
+}*/
+input {
+  border: 0;
+  background-color: rgb(205, 206, 199, 70%);
+  padding: 7px;
+  border-radius: 8px;
+}
+
+label {
+  font-size: 18px;
+  color: rgb(100, 0, 0, 70%);
+  font-weight: bold;
+}
+
+.regtitle {
+  color: rgb(100, 0, 0);
+}
