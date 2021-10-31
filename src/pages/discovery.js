@@ -1,14 +1,12 @@
 import Header from '../components/header/header';
 import Footer from '../components/footer/footer';
-import Filter from '../components/filter/filter';
-import FoodList from '../components/foodList/foodList';
+import ContextFilter from '../context/filter.context';
 
 function Discovery() {
   return (
     <>
       <Header />
-      <Filter />
-      <FoodList />
+      <ContextFilter />
       <Footer />
     </>
   );
