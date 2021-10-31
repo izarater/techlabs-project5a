@@ -4,7 +4,7 @@ import Button from '../button/button';
 
 function Restaurant() {
   return (
-    <footer className="restaurant">
+    <restaurant className="restaurant">
       <div className="restaurant-column1"></div>
       <div className="restaurant-column2">
         <div className="restaurant-text">
@@ -22,7 +22,7 @@ function Restaurant() {
           </Link>
         </div>
       </div>
-    </footer>
+    </restaurant>
   );
 }
 
