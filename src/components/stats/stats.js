@@ -1,5 +1,6 @@
 import './stats.css';
 import Button from '../button/button';
+import { Link } from 'react-router-dom';
 
 function Stats() {
   return (
@@ -14,9 +15,9 @@ function Stats() {
           to round the planet Earth almost three times by lining up trucks fully
           loaded with all kinds of meals.
         </p>
-        <div className="signUp-button">
-          <Button variant="primary">Sign up</Button>
-        </div>
+          <Link to="/signup">
+            <Button variant="primary">Sign Up</Button>
+          </Link>
       </div>
       <img
         id="graph_1"

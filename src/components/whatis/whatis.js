@@ -1,5 +1,6 @@
 import './whatis.css';
 import Button from '../button/button';
+import { Link } from 'react-router-dom';
 
 function WhatIs() {
   return (
@@ -15,9 +16,11 @@ function WhatIs() {
         <Button variant="primary" size="m">
           Read More
         </Button>
-        <Button variant="tertiary" size="m">
-          Start Using
-        </Button>
+        <Link to="/login">
+          <Button variant="tertiary" size="m">
+            Start Using
+          </Button>
+        </Link>
       </div>
     </div>
   );

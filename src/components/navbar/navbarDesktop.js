@@ -19,7 +19,12 @@ function NavbarDesktop() {
               Restaurants
             </Link>
           </li>
-          <Button variant="secondary">Sign up</Button>
+          <Link to="/login">
+            <Button variant="primary">Sign In</Button>
+          </Link>
+          <Link to="/signup">
+            <Button variant="secondary">Sign Up</Button>
+          </Link>
         </ul>
       </header>
     </>
