@@ -8,10 +8,7 @@ function AboutUs() {
         <div className="aboutus-text">
           <h2>TechLabs Project</h2>
           <p>
-          SaveFood is born in october of 2021 with an interdisciplinary
-          Web Development team, as a result of the three-week lasting 
-          Tech for Good Project Phase of the TechLabs 9-week Remote 
-          Bootcamp #codeathome.
+          Savefood is a community of restaurants and developers, who believe that the future is in zero-waste of food. Together we build and maintain a network for restaurants to give away the optimal food that they can not longer hold on their shelves (because of tight executive restaurant policies...) and people or organizations can pick up, distribute, and enjoy that food.
           </p>
         </div>
       </div>
