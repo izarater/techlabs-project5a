@@ -4,10 +4,24 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+
+
+import { Provider } from 'react-redux';
+import generateStore from './redux/store'
+
+// importando el store ya creado para que pueda ser usado en componentes hijos
+import store from './redux/createdStore';
+
+
+
+
+
+// watchers
+
 ReactDOM.render(
-  <React.StrictMode>
+  <Provider store = {store}>
     <App />
-  </React.StrictMode>,
+  </Provider>,
   document.getElementById('root')
 );
 

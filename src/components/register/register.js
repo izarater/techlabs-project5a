@@ -1,20 +1,63 @@
 import './register.css';
 import React, { useState } from 'react';
+
+import { useSelector } from 'react-redux';
 import { useForm } from 'react-hook-form';
+import { ErrorMessage } from '@hookform/error-message';
 import Button from '../button/button';
 
+import { useDispatch } from 'react-redux';
+import { registerAction } from '../../redux/Ducks/authDuck';
+
+//importando desde mui
+import { Select, MenuItem, FormHelperText } from '@mui/material'
+
+
+import watch from 'redux-watch';
+import store from '../../redux/createdStore';
+import { useHistory } from 'react-router-dom'
+
 function Register() {
+  const dispatch = useDispatch()
+  const history = useHistory()
+
   const { register, handleSubmit, errors } = useForm();
   const [userInfo, setUserInfo] = useState();
+
+  const roles = useSelector(state => state.authentication.listRoles)
+  // console.log(Object.values(roles))
+  const [ rol, setRol ] = useState()
+
+  const changeRol = (event) => {
+    setRol(event.target.value)
+  }
+
+
+  let w = watch(store.getState, 'authentication.userData')
+
+  store.subscribe(w((newVal, oldVal, objectPath)=>{
+    console.log(newVal)
+    if(newVal ){ // validadno un login nuevo
+      // setUserInfo(newVal)
+      history.push('/')
+      
+    } else if(!newVal){
+      console.log('No permitir navegacion')
+    }
+  }))
+
   const onSubmit = (data) => {
+    // console.log('hola mundo')
     setUserInfo(data);
-    console.log(data);
+    dispatch(registerAction(data))
+    // console.log(data);
   };
-  console.log(errors)
+  
+  // console.log(errors)
   return (
     <div className='register'>
     <div className='container'>
-      <pre>{JSON.stringify(userInfo, undefined, 2)}</pre>
+      {/* <pre>{JSON.stringify(userInfo, undefined, 2)}</pre> */}
       <form onSubmit={ handleSubmit(onSubmit)}>
         <h1 className="regtitle">Registration Form</h1>
         <div className='ui divider'></div>
@@ -27,7 +70,7 @@ function Register() {
               type='text' 
               name='name' 
               //placeholder='Name' 
-              {...register("A", {required:'Name is required'})}/>
+              {...register("name", {required:'Name is required'})}/>
             </div>
 
           <br/>
@@ -38,7 +81,7 @@ function Register() {
               type='text' 
               name='surname' 
               //placeholder='Surname' 
-              {...register("B", {required:'Surname is required'})}/>
+              {...register("surname", {required:'Surname is required'})}/>
           </div>   
 
           <br/>
@@ -49,7 +92,7 @@ function Register() {
               type='text' 
               name='username' 
               //placeholder='Username' 
-              {...register("C", {required:'Username is required'})}/>
+              {...register("username", {required:'Username is required'})}/>
           </div>
           
 
@@ -61,7 +104,7 @@ function Register() {
               type='email' 
               name='email' 
               //placeholder='Email' 
-              {...register("D", {required:'Email is required', pattern:{value:/^\S+@\S+$/i,message:'This is not valid email'}})}/>
+              {...register("email", {required:'Email is required', pattern:{value:/^\S+@\S+$/i,message:'This is not valid email'}})}/>
           </div>
           
 
@@ -73,7 +116,7 @@ function Register() {
               type='password' 
               name='password' 
               //placeholder='Password' 
-              {...register("E", {
+              {...register("password", {
                 required:'Password is required', 
                 minLength: {
                   value:4, 
@@ -85,6 +128,20 @@ function Register() {
                 },
               })}/>
           </div>
+          
+          <br/>
+          <FormHelperText>Rol</FormHelperText>
+          <Select label="Rol"  onChange={changeRol} sx = {{minWidth: '60%',color: '#000000'}} {
+            ...register("rol",{required: "Es necesario brindar el rol"})
+          }>
+            
+            {roles && roles.map((role, key) => (
+              
+              <MenuItem key={key} value={role}>{role}</MenuItem>
+            ))}
+
+            
+          </Select>
           <br/>
           <br/>
           <div class="form-button">
