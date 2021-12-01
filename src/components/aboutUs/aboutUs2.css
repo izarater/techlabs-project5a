@@ -15,7 +15,9 @@
   }
   
   .aboutus2-text {
-    padding: 0 2rem 1rem 2rem;
+    padding: 1rem 5rem 2rem 3rem;
+    font-size: 1.5rem;
+    text-align: center;
   }
   
   .aboutus2-button {
@@ -27,6 +29,7 @@
   .aboutus2-column2 {
     width: 100%;
     height: 20rem;
+    margin-block-start: 7rem;
     background: url('../../assets/logoun.png');
   }
   
@@ -40,12 +43,12 @@
   }
 
   .aboutus2-column2 {
-    width: 40%;
-    margin-right: 3rem;
+    width: 550px;
+    margin-right: 5rem;
     background: url('../../assets/logoun.png');
     border-top-right-radius: 3rem;
     border-bottom-right-radius: 3rem;
-    height: 40rem;
+    height: 20rem;
   }
 
   .aboutus2-column1 {
