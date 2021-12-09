@@ -1,0 +1,76 @@
+.aboutus {
+    margin-top: auto;
+    width: 100%;
+    background-color: #fff;
+    color: #747474;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 40px;
+  }
+  
+  .aboutus h2 {
+    color: #212121;
+    font-size: 2rem;
+  }
+  
+  .aboutus-text {
+    padding: 1rem 5rem 2rem 3rem;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  
+  .aboutus-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .aboutus-column1 {
+    width: 100%;
+    height: 10rem;
+    background: url('../../assets/Bootcamp.png');
+  }
+  
+  /* Desktop */
+  
+@media screen and (min-width: 40rem) {
+  .aboutus {
+    flex-direction: row;
+    text-align: left;
+    padding: 6rem 0 3rem;
+  }
+
+  .aboutus-column1 {
+    /*width: 40%;
+    margin-right: 3rem;
+    background: url('../../assets/Bootcamp.png');
+    border-top-right-radius: 3rem;
+    border-bottom-right-radius: 3rem;
+    height: 40rem;*/
+
+    width: 680px;
+    margin-right: 5rem;
+    height: auto;
+    background: url('../../assets/Bootcamp.png');
+    border-top-right-radius: 3rem;
+    border-bottom-right-radius: 3rem;
+    border-top-left-radius: 3rem ;
+    border-bottom-left-radius: 3rem;
+    height: 552px;
+    margin-left: 50px;
+    margin-top: 10px;
+  }
+
+  .aboutus-column2 {
+    margin: auto 50px auto 0;
+    width: 50%;
+  }
+
+  .aboutus-button {
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    padding-left: 2rem;
+  }
+}

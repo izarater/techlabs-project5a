@@ -1,0 +1,65 @@
+.aboutus2 {
+    margin-top: auto;
+    width: 100%;
+    background-color: #fff;
+    color: #747474;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 40px;
+  }
+  
+  .aboutus2 h2 {
+    color: #212121;
+    font-size: 2rem;
+  }
+  
+  .aboutus2-text {
+    padding: 1rem 5rem 2rem 3rem;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  
+  .aboutus2-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .aboutus2-column2 {
+    width: 100%;
+    height: 20rem;
+    margin-block-start: 7rem;
+    background: url('../../assets/logoun.png');
+  }
+  
+  /* Desktop */
+  
+@media screen and (min-width: 40rem) {
+  .aboutus2 {
+    flex-direction: row;
+    text-align: left;
+    padding: 6rem 0 3rem;
+  }
+
+  .aboutus2-column2 {
+    width: 550px;
+    margin-right: 5rem;
+    background: url('../../assets/logoun.png');
+    border-top-right-radius: 3rem;
+    border-bottom-right-radius: 3rem;
+    height: 20rem;
+  }
+
+  .aboutus2-column1 {
+    margin: auto 50px auto 0;
+    width: 50%;
+  }
+
+  .aboutus2-button {
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    padding-left: 2rem;
+  }
+}
