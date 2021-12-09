@@ -45,6 +45,7 @@ export default {
   },
 
   register: async (data) => {
+
     try {
       const result = await api.post('/authentication/signup', data)
       return result.data

@@ -5,12 +5,15 @@ import Stats from '../components/stats/stats';
 import Footer from '../components/footer/footer';
 import WhatIs from '../components/whatis/whatis';
 import Restaurant from '../components/restaurant/restaurant';
+import NewProduct from '../components/product/NewProduct'
 
 function Home() {
   return (
+    
     <>
       <Header />
       <Main />
+      <NewProduct/>
       <WhatIs />
       <Restaurant />
       <InfoPills />
