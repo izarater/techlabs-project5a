@@ -26,17 +26,26 @@ import { useHistory, useLocation } from 'react-router-dom';
 
 import { getListRolesAction as listRoles } from './redux/Ducks/authDuck'
 
+
+// lista de importaciones de desarrollo para prueba e implementacion de la lista de tags
+import products from './services/productService'
+import { listTypesActions } from './redux/Ducks/productDuck';
+
+
 // let w = watch(store.getState, 'authentication.userData')
 // store.subscribe(w((newVal, oldVal, objectPath) => {
 //   console.log('somehting change: ', newVal, oldVal)
 // }))
 
 function App() {
+  
+
   const history = useHistory()
 
   const dispatch = useDispatch()
 
   dispatch(listRoles())
+  dispatch(listTypesActions())
   
   // const location = useLocation()
 
