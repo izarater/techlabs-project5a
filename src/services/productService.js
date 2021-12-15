@@ -9,5 +9,32 @@ export default {
     } catch (error) {
       return { error}
     }
+  },
+  newProduct :  async (dataNewProduct) => {
+    const {
+      username,
+      password,
+      product_type,
+      product_name,
+      description,
+      elaboration_date,
+    }= dataNewProduct
+    try {
+      const result = await api.post('/products/new-product', {
+        username,
+        password,
+        product_type,
+        product_name,
+        description,
+        elaboration_date,
+      })
+      
+
+      return { data: result.data, message: result.message }
+    } catch (error) {
+      // console.log(error.response.data)
+      // console.log(error.response.data.message)
+      return { message: error.response.data.message}
+    }
   }
 }
