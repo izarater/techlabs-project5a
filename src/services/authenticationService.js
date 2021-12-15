@@ -54,6 +54,15 @@ export default {
         return {result: error.result.data}
       return error.response.data
     }
+  },
+
+  changePassword: async (data) => {
+    try {
+      const result = await api.post('/authentication/changePassword', data)
+      return result.data
+    } catch (error) {
+      return { error }
+    }
   }
 }
 

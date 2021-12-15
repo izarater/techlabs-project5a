@@ -3,13 +3,15 @@ import Button from '../button/button';
 import { useState } from 'react'
 
 import { Avatar, Tooltip, IconButton,ListItemIcon, Menu, MenuItem, Divider } from '@mui/material';
-import { Settings, Logout, PersonAdd } from '@mui/icons-material';
+import { Settings, Logout, PersonAdd, ChangeCircle } from '@mui/icons-material';
 
 import { Box } from '@mui/system';
 
 import './navbar.css';
 
 import { useSelector} from 'react-redux'
+
+import ChangePassword from '../changePassword/ChangePassword';
 
 function NavbarDesktop() {
   const userData = useSelector(state => state.authentication.userData)
@@ -51,7 +53,7 @@ function NavbarDesktop() {
               </Link>
             </> : 
             <>
-              {/* <Box>
+              <Box>
                 <Tooltip title= {userData.username}>
                   <IconButton onClick={handleClick} size="small" sx={{ ml: 2 }}>
                     <Avatar>
@@ -62,7 +64,7 @@ function NavbarDesktop() {
                     anchorEl={anchorEl}
                     open={open}
                     onClose={handleClose}
-                    onClick={handleClose}
+                    // onClick={handleClose}
                     PaperProps={{
                     elevation: 0,
                     sx: {
@@ -104,9 +106,10 @@ function NavbarDesktop() {
 
                     <MenuItem>
                       <ListItemIcon>
-                        <PersonAdd fontSize="small" />
+                        <ChangeCircle fontSize="small" />
                       </ListItemIcon>
-                      Add another account
+                      {/* Change password */}
+                      <ChangePassword onClick={handleClick}/>
                     </MenuItem>
 
                     <MenuItem>
@@ -123,7 +126,7 @@ function NavbarDesktop() {
                         Logout
                     </MenuItem>
                 </Menu>
-              </Box> */}
+              </Box>
             </>
           }
           
