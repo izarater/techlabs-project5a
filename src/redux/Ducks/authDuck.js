@@ -21,6 +21,10 @@ const REGISTER_FAIL = 'REGISTER_FAIL'
 const GET_LIST_ROLES_SUCCESS = 'GET_LIST_ROLES_SUCCESS'
 const GET_LIST_ROLES_FAIL = 'GET_LIST_ROLES_FAIL'
 
+const CHANGE_PASSWORD_SUCCESS = "CHANGE_PASSWORD_SUCCESS"
+const CHANGE_PASSWORD_FAIL = "CHANGE_PASSWORD_FAIL"
+const CHANGE_PASSWORD_RESET = 'CHANGE_PASSWORD_RESET'
+
 const LOGOUT = 'LOGOUT'
 
 
@@ -71,6 +75,24 @@ export default function authReducer(state = data, action){
       return {
         ...state,
         userData: undefined,
+      }
+    case CHANGE_PASSWORD_SUCCESS:
+      return {
+        ...state,
+        changeError: undefined,
+        userData: action.payload
+      }
+    case CHANGE_PASSWORD_FAIL:
+      return {
+        ...state,
+        changeError: action.payload
+        // userData: payload
+      }
+    case CHANGE_PASSWORD_RESET:
+      return {
+        ...state,
+        changeError: undefined
+        // userData: payload
       }
     default:
       return state
@@ -202,5 +224,46 @@ export const registerAction = (data) => async (dispatch, getState)=> {
 export const logoutAction = () => (dispatch, getState) =>{
   dispatch({
     type: LOGOUT,
+  })
+}
+
+
+export const changePasswordAction = (data) => async (dispatch, getState) => {
+  const {
+    username,
+    password,
+    newPassword,
+  } = data
+
+  try {
+    const result = await authenticationService.changePassword({
+      username,
+      password,
+      newPassword
+    })
+    console.log(result)
+    if(result.changed){
+      dispatch({
+        type: CHANGE_PASSWORD_SUCCESS,
+        payload: result.data
+      })
+    }else{
+      dispatch({
+        type: CHANGE_PASSWORD_FAIL,
+        payload: result.error.response.data.message
+      })
+    }
+  } catch (error) {
+    dispatch({
+      type: CHANGE_PASSWORD_FAIL,
+      payload: "Mistake in the execution of the task",
+      error
+    })
+  }
+}
+
+export const changePasswordResetAction = () => (dispatch, getState) => {
+  dispatch({
+    type:CHANGE_PASSWORD_RESET
   })
 }

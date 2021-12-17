@@ -50,7 +50,6 @@ function Register() {
     // console.log('hola mundo')
     setUserInfo(data);
     dispatch(registerAction(data))
-    // console.log(data);
   };
   
   // console.log(errors)
