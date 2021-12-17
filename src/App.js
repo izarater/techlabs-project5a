@@ -11,6 +11,7 @@ import Discovery from './pages/discovery';
 import RegisterPage from './pages/registerPage';
 import LoginPage from './pages/loginPage';
 import AboutUsPage from './pages/aboutUsPage';
+import PasswordPage from './pages/passwordPage';
 
 // import { useHistory } from 'react-router-dom';
 import watch from 'redux-watch';
@@ -77,6 +78,7 @@ function App() {
         <Route path="/signup" component={RegisterPage} />
         //<Route path="/login" component={LoginPage} />
         <Route path="/about" component={AboutUsPage} />
+        <Route path="/password" component={PasswordPage} /> 
         <Route path="/login" component={()=><LoginPage/>} />
       </Switch>
     </Router>
