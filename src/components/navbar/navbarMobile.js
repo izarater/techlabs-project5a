@@ -22,7 +22,7 @@ function NavbarMobile() {
           </li>
           <li className="nav-item">
             <Link className="nav-link" to="/discovery">
-              Restaurants
+              Discovery
             </Link>
           </li>
           <Link to="/login">
