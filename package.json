@@ -9,7 +9,7 @@
     "@emotion/styled": "^11.6.0",
     "@hookform/error-message": "^2.0.0",
     "@material-ui/icons": "^4.11.2",
-    "@mui/icons-material": "^5.2.1",
+    "@mui/icons-material": "^5.2.5",
     "@mui/lab": "^5.0.0-alpha.58",
     "@mui/material": "^5.2.0",
     "@testing-library/jest-dom": "^5.14.1",
