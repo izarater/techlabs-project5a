@@ -1,3 +1,7 @@
+
+//import TemporalGenerator from './temporalGenerator';
+
+
 export const dataFood = [
   {
     id: 1,
@@ -36,7 +40,7 @@ export const dataFood = [
       'Kiwi, strawberries, apple, pear, papaya... All those flavors at once in your mouth!',
     src: 'https://cdn2.cocinadelirante.com/sites/default/files/styles/gallerie/public/images/2021/07/ensalada-de-frutas-de-temporada-para-el-desayuno.jpg',
     alt: 'fruit salad',
-    tags: ['Desert'],
+    tags: ['Dessert'],
   },
   {
     id: 5,
@@ -88,3 +92,26 @@ export const dataFood = [
     tags: ['Pizza'],
   },
 ];
+
+
+
+/*
+import React, { useState } from 'react';
+
+import { useSelector } from 'react-redux';
+
+import watch from 'redux-watch';
+import store from '../redux/createdStore';
+
+
+function TemporalGenerator(name) {
+  const restaurants = useSelector(state => state.restaurants.restaurant)
+  
+  const filtered = restaurants.filter(function(element){
+    return element.establishment_name = name;
+  });
+}
+
+export default TemporalGenerator;
+
+*/

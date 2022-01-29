@@ -1,9 +1,10 @@
 import './filter.css';
 import Dropdown from '../dropdown/dropdown';
-import { dataFood } from '../../utils/dataFood';
+//import { dataFood } from '../../utils/dataFood';
+import { useSelector } from 'react-redux';
 
 function Filter() {
-  const tagFood = dataFood.map((food) => food.tags).flat();
+  const tagFood = useSelector(state => state.products.listTypes)
   const uniqTags = ['All', ...new Set(tagFood)];
   const tagMap = uniqTags.map((tag) => ({
     value: tag,
