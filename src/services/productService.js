@@ -14,8 +14,11 @@ export default {
     const {
       username,
       password,
-      product_type,
-      product_name,
+      tags,
+      name,
+      quantity,
+      src,
+      alt,
       description,
       elaboration_date,
     }= dataNewProduct
@@ -23,8 +26,11 @@ export default {
       const result = await api.post('/products/new-product', {
         username,
         password,
-        product_type,
-        product_name,
+        tags,
+        name,
+        quantity,
+        src,
+        alt,
         description,
         elaboration_date,
       })

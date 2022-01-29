@@ -74,8 +74,11 @@ export const newProductAction = (dataNewProduct) => async (dispatch, getState) =
   const {
     username,
     password,
-    product_type,
-    product_name,
+    tags,
+    name,
+    quantity,
+    src,
+    alt,
     description,
     elaboration_date,
   }= dataNewProduct
@@ -83,8 +86,11 @@ export const newProductAction = (dataNewProduct) => async (dispatch, getState) =
     const result = await productService.newProduct({
       username,
       password,
-      product_type,
-      product_name,
+      tags,
+      name,
+      quantity,
+      src,
+      alt,
       description,
       elaboration_date,
     })

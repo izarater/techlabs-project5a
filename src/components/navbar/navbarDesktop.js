@@ -12,6 +12,7 @@ import './navbar.css';
 import { useSelector} from 'react-redux'
 
 import ChangePassword from '../changePassword/ChangePassword';
+import NewProduct from '../product/NewProduct';
 
 function NavbarDesktop() {
   const userData = useSelector(state => state.authentication.userData)
@@ -103,6 +104,14 @@ function NavbarDesktop() {
                     </MenuItem>
 
                     <Divider />
+
+                    <MenuItem>
+                      <ListItemIcon>
+                        <ChangeCircle fontSize="small" />
+                      </ListItemIcon>
+                      {/* New Product */}
+                      <NewProduct onClick={handleClick}/>
+                    </MenuItem>
 
                     <MenuItem>
                       <ListItemIcon>
