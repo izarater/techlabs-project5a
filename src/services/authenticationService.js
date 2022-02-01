@@ -44,7 +44,19 @@ export default {
     }
   },
 
-  register: async (data) => {
+  register: async (data, rol) => {
+
+    try {
+      const result = await api.post(`/authentication/signup/${rol}`, data)
+      return result.data
+    } catch (error) {
+      if(error.result)
+        return {result: error.result.data}
+      return error.response.data
+    }
+  },
+
+  registerWithRol: async (data, rol) => {
 
     try {
       const result = await api.post('/authentication/signup', data)

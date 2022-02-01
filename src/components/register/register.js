@@ -12,6 +12,11 @@ import { registerAction } from '../../redux/Ducks/authDuck';
 //importando desde mui
 import { Select, MenuItem, FormHelperText } from '@mui/material'
 
+// importando las nuevas vistas de registros
+import Beneficiary from './RegisterBeneficiary'
+import Client from './RegisterClient'
+import Establishment from './RegisterEstablishment'
+
 
 import watch from 'redux-watch';
 import store from '../../redux/createdStore';
@@ -26,9 +31,10 @@ function Register() {
 
   const roles = useSelector(state => state.authentication.listRoles)
   // console.log(Object.values(roles))
-  const [ rol, setRol ] = useState()
+  const [ rol, setRol ] = useState('')
 
   const changeRol = (event) => {
+    console.log(event.target.value)
     setRol(event.target.value)
   }
 
@@ -53,11 +59,50 @@ function Register() {
   };
   
   // console.log(errors)
+
+
+  /**
+   * Zona de variables nuevas por control de cambios
+   */
+  
   return (
     <div className='register'>
     <div className='container'>
+      <label>Choose a type of user</label>
+      <Select 
+        label="Rol"  
+        onChange={changeRol} 
+        sx = {{minWidth: '60%',color: '#000000'}}
+        //{...register("rol",{required: "Es necesario brindar el rol"})}
+      >
+            
+        {
+        
+        roles && roles.map((role, key) => (
+          
+          <MenuItem key={key} value={role}>{role}</MenuItem>
+        ))}
+
+        
+      </Select>
+      
+      <div>
+        {
+          rol == 'Establishment'? <Establishment></Establishment> : rol == 'Client'? <Client></Client> : rol == 'Beneficiary'?<Beneficiary></Beneficiary>:<div>Choose rol first</div>
+        }
+        {/* {(() => {
+          // console.log(rol)
+          switch (rol) {
+            case "Establishment":   return <Establishment></Establishment>;
+            case "Client": return <Client></Client>;
+            case "Beneficiary":  return <Beneficiary></Beneficiary>;
+            default:      return <div>Choose rol first</div>;
+        }
+        })()} */}
+      </div>
+      
       {/* <pre>{JSON.stringify(userInfo, undefined, 2)}</pre> */}
-      <form onSubmit={ handleSubmit(onSubmit)}>
+      {/* <form onSubmit={ handleSubmit(onSubmit)}>
         <h1 className="regtitle">Registration Form</h1>
         <div className='ui divider'></div>
         <div className='ui form'>
@@ -130,24 +175,16 @@ function Register() {
           
           <br/>
           <FormHelperText>Rol</FormHelperText>
-          <Select label="Rol"  onChange={changeRol} sx = {{minWidth: '60%',color: '#000000'}} {
-            ...register("rol",{required: "Es necesario brindar el rol"})
-          }>
-            
-            {roles && roles.map((role, key) => (
-              
-              <MenuItem key={key} value={role}>{role}</MenuItem>
-            ))}
-
-            
-          </Select>
+          
           <br/>
           <br/>
           <div class="form-button">
                 <Button variant="quaternary">Submit</Button>
           </div>
         </div>
-      </form>
+      </form> */}
+      
+      
     </div>
     </div>
 );
