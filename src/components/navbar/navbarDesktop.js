@@ -14,6 +14,11 @@ import { useSelector} from 'react-redux'
 import ChangePassword from '../changePassword/ChangePassword';
 import NewProduct from '../product/NewProduct';
 
+
+//uso de redux
+import { useDispatch } from 'react-redux';
+// import { logoutAction }
+
 function NavbarDesktop() {
   const userData = useSelector(state => state.authentication.userData)
   // console.log(userData)

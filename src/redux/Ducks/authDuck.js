@@ -221,6 +221,30 @@ export const registerAction = (data) => async (dispatch, getState)=> {
   }
 }
 
+export const registerWithTypeAction = (data,rol) => async (dispatch, getState)=> {
+  
+  try {
+    const result = await authenticationService.register(data, rol)
+    if(result.isCompleted){
+      dispatch({
+        type: REGISTER_SUCCESS,
+        payload: result.data
+      })
+    }else{
+      dispatch({
+        type:REGISTER_FAIL,
+        payload: result.error
+      })
+    }
+
+  } catch (error) {
+    dispatch({
+      type: REGISTER_FAIL,
+      payload: error
+    })
+  }
+}
+
 export const logoutAction = () => (dispatch, getState) =>{
   dispatch({
     type: LOGOUT,
