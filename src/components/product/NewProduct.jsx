@@ -77,8 +77,8 @@ const NewProduct = () => {
 
   const submit = (dataProduct) => {
     // validar los datos del producto antes de enviarlo al servidor
-    console.log({...dataProduct, elaboration_date: date, product_type: valuesTags, username: userData.username} )
-    dispatch(newProductAction({...dataProduct, elaboration_date: date, product_type: valuesTags, username: userData.username}))
+    console.log({...dataProduct, elaboration_date: date, tags: valuesTags, username: userData.username} )
+    dispatch(newProductAction({...dataProduct, elaboration_date: date, tags: valuesTags, username: userData.username}))
     handleClose() // se cierra el dialog 
   }
 
@@ -132,12 +132,12 @@ const NewProduct = () => {
             </FormHelperText>
             <TextField
               type="text"
-              name="product_name"
+              name="name"
               inputProps={{
                 
                 autoComplete: 'new-password',
               }}
-              {...register("product_name", {required:" The product name is required"})}
+              {...register("name", {required:" The product name is required"})}
             />
             
             <FormHelperText>
@@ -156,13 +156,43 @@ const NewProduct = () => {
             </LocalizationProvider>
 
             <FormHelperText>
-              Informacion Adicional
+              Tamaño Porción
+            </FormHelperText>
+            <TextareaAutosize
+              
+              maxRows={2}
+              aria-label="maximum height"
+              {...register('quantity')}
+            />
+            
+            <FormHelperText>
+              Descripción
             </FormHelperText>
             <TextareaAutosize
               
               maxRows={4}
               aria-label="maximum height"
               {...register('description')}
+            />
+
+            <FormHelperText>
+              Foto
+            </FormHelperText>
+            <TextareaAutosize
+              
+              maxRows={2}
+              aria-label="maximum height"
+              {...register('src')}
+            />
+
+            <FormHelperText>
+              Plato en 1 o 2 palabras
+            </FormHelperText>
+            <TextareaAutosize
+              
+              maxRows={2}
+              aria-label="maximum height"
+              {...register('alt')}
             />
 
             <FormHelperText>
