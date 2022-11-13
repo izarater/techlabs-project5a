@@ -7,16 +7,9 @@ function AboutUs2() {
       <div className="aboutus2-text">
           <h2>University Project</h2>
           <p>
-          we are a software development team from the national university of 
-          Colombia made up of:<br/>
-           
-          <br/>
-          Isaac Zarate Reyes<br/>
-          Cristian Daniel Ramirez<br/>
-          Harold Andres Potosi<br/>
-          Rodrigo Sierra Agredo<br/>
-          <br/>
-          This project will be carried out as part of the software engineering II course
+          Immediately after submitting the project on November 1st to the #codeathome team, 
+          since part of the team are engineering students from the National University of Colombia, 
+          it was decided to continue with the project as part of the software engineering II course.
           </p>
         </div>
       </div>
