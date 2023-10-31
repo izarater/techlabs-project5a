@@ -2,5 +2,5 @@ import axios from 'axios'
 
 
 export default axios.create({
-  baseURL : 'https://web-production-3da7.up.railway.app/api'
+  baseURL : 'https://techlabs-project5a-backend-dev-xqcm.3.us-1.fl0.io/api'
 })
